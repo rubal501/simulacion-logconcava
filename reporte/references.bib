@@ -1,0 +1,137 @@
+@article{gilks1992derivative,
+  title={Derivative-free adaptive rejection sampling for Gibbs sampling},
+  author={Gilks, Walter R},
+  journal={Bayesian statistics},
+  volume={4},
+  number={2},
+  pages={641--649},
+  year={1992}
+}
+
+@article{james2024automated,
+  title={Automated generation of initial points for adaptive rejection sampling of log-concave distributions},
+  author={James, Jonathan},
+  journal={Statistics and Computing},
+  volume={34},
+  number={3},
+  pages={109},
+  year={2024},
+  publisher={Springer}
+}
+
+@article{martino2011generalization,
+  title={A generalization of the adaptive rejection sampling algorithm},
+  author={Martino, Luca and M{\'\i}guez, Joaqu{\'\i}n},
+  journal={Statistics and Computing},
+  volume={21},
+  pages={633--647},
+  year={2011},
+  publisher={Springer}
+}
+
+@misc{ComputerGenerationPoisson,
+  title = {Computer {{Generation}} of {{Poisson Deviates}} from {{Modified Normal Distributions}} {\textbar} {{ACM Transactions}} on {{Mathematical Software}}},
+  urldate = {2025-04-30},
+  howpublished = {https://dl.acm.org/doi/10.1145/355993.355997},
+  file = {/Users/robertito/Zotero/storage/Z4TAV5A8/355993.html}
+}
+
+@misc{dahualinJuliaStatsDistributionsjlV0251192025,
+  title = {{{JuliaStats}}/{{Distributions}}.Jl: V0.25.119},
+  shorttitle = {{{JuliaStats}}/{{Distributions}}.Jl},
+  author = {Dahua Lin and David Widmann and Simon Byrne and John Myles White and Andreas Noack and Mathieu Besan{\c c}on and Douglas Bates and John Pearson and John Zito and Alex Arslan and Moritz Schauer and Kevin Squire and David Anthoff and Theodore Papamarkou and Jan Drugowitsch and Benjamin Deonovic and Seth Axen and Avik Sengupta and Viral B. Shah and Giuseppe Ragusa and Glenn Moynihan and Brian J Smith and Christoph Dann and Mike J Innes and Martin O'Leary and Mohamed Tarek and Michael and Gustavo Lacerda},
+  year = {2025},
+  month = apr,
+  doi = {10.5281/ZENODO.2647458},
+  urldate = {2025-04-30},
+  abstract = {Distributions v0.25.119 Diff since v0.25.118 Merged pull requests: Implement std(::MultivariateDistribution) (\#1352) (@bicycle1885) BREAKING Fix loss of structure in cov() and invcov() of AbstractMvNormal subtypes (\#1373) (@st--) add partype method to lognormal and semicircle (\#1773) (@bgctw) Fix underflow of logccdf of PGeneralizedGaussian (\#1932) (@devmotion) Allow ForwardDiff v1 (\#1957) (@mcabbott) Require Julia {$>$}= 1.10 (\#1959) (@devmotion) Fix warnings in tests (\#1960) (@devmotion) Remove docstring of non-existent method (\#1962) (@abhro) Reduce allocations of cov(::MultivariateMixture) (\#1967) (@devmotion) Use generic axpy! instead of calling BLAS.axpy! (\#1968) (@jishnub) Closed issues: why do cov and invcov call full? (\#572) Underflow in logccdf for PGeneralizedGaussian (\#1916) Matrix normal distribution support (\#1946) May I suggest adding the sprand(::Distributions.Distribution, ...) method, like rand() does? (\#1955) cov(d::MultivariateMixture) assumes overly specific typing on component covariance (\#1969) Random sample from LogNormal does not return values of the same type as its parameters (\#1970)},
+  copyright = {Creative Commons Attribution 4.0 International},
+  howpublished = {Zenodo}
+}
+
+@article{devroyeInequalitiesSimulationMethods,
+  title={Inequalities and simulation methods for univariate log-concave densities},
+  author={Devroye, Luc},
+  journal={Communications in Statistics-Simulation and Computation},
+  pages={1--21},
+  year={2025},
+  publisher={Taylor \& Francis}
+}
+
+@book{devroyeNonUniformRandomVariate1986,
+  title = {Non-{{Uniform Random Variate Generation}}},
+  author = {Devroye, Luc},
+  year = {1986},
+  series = {{{SpringerLink B{\"u}cher}}},
+  publisher = {Springer},
+  address = {New York, NY},
+  doi = {10.1007/978-1-4613-8643-8},
+  isbn = {978-1-4613-8645-2 978-1-4613-8643-8},
+  langid = {english}
+}
+
+@article{devroyeNoteGeneratingRandom2012,
+  title = {A Note on Generating Random Variables with Log-Concave Densities},
+  author = {Devroye, Luc},
+  year = {2012},
+  month = may,
+  journal = {Statistics \& Probability Letters},
+  volume = {82},
+  number = {5},
+  pages = {1035--1039},
+  issn = {0167-7152},
+  doi = {10.1016/j.spl.2012.01.022},
+  urldate = {2025-04-30},
+  abstract = {We present a black-box style rejection method that is valid for generating random variables with any log-concave density, provided that one knows a mode of the density. When the density is only known up to a constant factor, that method is no longer applicable.},
+  keywords = {Expected time analysis,Log-concavity,Monte Carlo method,Random variate generation,Simulation}
+}
+
+@article{gilksAdaptiveRejectionSampling1992,
+  title = {Adaptive {{Rejection Sampling}} for {{Gibbs Sampling}}},
+  author = {Gilks, W. R. and Wild, P.},
+  year = {1992},
+  journal = {Journal of the Royal Statistical Society. Series C (Applied Statistics)},
+  volume = {41},
+  number = {2},
+  eprint = {2347565},
+  eprinttype = {jstor},
+  pages = {337--348},
+  publisher = {[Royal Statistical Society, Oxford University Press]},
+  issn = {0035-9254},
+  doi = {10.2307/2347565},
+  urldate = {2025-04-30},
+  abstract = {We propose a method for rejection sampling from any univariate log-concave probability density function. The method is adaptive: as sampling proceeds, the rejection envelope and the squeezing function converge to the density function. The rejection envelope and squeezing function are piece-wise exponential functions, the rejection envelope touching the density at previously sampled points, and the squeezing function forming arcs between those points of contact. The technique is intended for situations where evaluation of the density is computationally expensive, in particular for applications of Gibbs sampling to Bayesian models with non-conjugacy. We apply the technique to a Gibbs sampling analysis of monoclonal antibody reactivity.},
+  file = {/Users/robertito/Zotero/storage/95PZV2WR/Gilks y Wild - 1992 - Adaptive Rejection Sampling for Gibbs Sampling.pdf}
+}
+
+@article{johnsonMomentProblemUnimodal1951,
+  title = {The {{Moment Problem}} for {{Unimodal Distributions}}},
+  author = {Johnson, N. L. and Rogers, C. A.},
+  year = {1951},
+  month = sep,
+  journal = {The Annals of Mathematical Statistics},
+  volume = {22},
+  number = {3},
+  pages = {433--439},
+  issn = {0003-4851},
+  doi = {10.1214/aoms/1177729590},
+  urldate = {2025-05-09},
+  langid = {english},
+  file = {/Users/robertito/Zotero/storage/KXHV6YNH/Johnson y Rogers - 1951 - The Moment Problem for Unimodal Distributions.pdf}
+}
+
+@article{marsagliaXorshiftRNGs2003,
+  title = {Xorshift {{RNGs}}},
+  author = {Marsaglia, George},
+  year = {2003},
+  month = jul,
+  journal = {Journal of Statistical Software},
+  volume = {8},
+  pages = {1--6},
+  issn = {1548-7660},
+  doi = {10.18637/jss.v008.i14},
+  urldate = {2025-05-07},
+  abstract = {Description of a class of simple, extremely fast random number generators (RNGs) with periods 2k - 1 for k = 32, 64, 96, 128, 160, 192. These RNGs seem to pass tests of randomness very well.},
+  copyright = {Copyright (c) 2003 George Marsaglia},
+  langid = {english}
+}
