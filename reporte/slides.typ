@@ -67,7 +67,7 @@
 - La eficiencia de AR depende de la elección de $g$, una buena $g$ cumple:
   - Queremos que $g/K$ sea fácil de muestrear
   - Queremos que $g$ pueda ser evaluada de forma eficiente
-  - Queremos que haya la mínima área entre $f$ y $K dot g$
+  - Queremos que la probabilidad de aceptacion sea lo mas alta posible
 
 - *NO es fácil obtener una densidad $g$ que cumpla todos los puntos de arriba*
 ]
@@ -492,10 +492,14 @@ Ejemplo de función envolvente $u_T$ y función de squezzing $l_T$ para una dens
 #new-section[Puntos finales]
 #slide[
 - ARS *NO* es optimo ya que en la mayoría de los casos es posible diseñar un algoritmo especializado.
-- La ventaja principal de ARS es su universalidad. Solo requerimos la forma cerrada de $f$ y su derivada para poder simular muestras 
-- Se han propuesto generalización de ARS que no requieren de la derivada de $f$ @gilks1992derivative y que pueden ser usados en densidades que no 
-  son log convacavs @martino2011generalization . Tambien se han diseñado métodos para optimizar la construcción del conjunto de abscisas inicial para 
-  aumentar la eficiencia del muestreo @james2024automated .
+- La ventaja principal de ARS es su universalidad. Solo requerimos la forma cerrada de $f$ y su derivada 
+  para poder simular   muestras 
+- En un trabajo posterior Gilks y Walters propusieron una version de ARS que no necesita la derivada de $f$  
+  @gilks1992derivative. Tambien se ha propuesto una generalizacion para densidades que no 
+  son log convacavs @martino2011generalization.
+- Tambien se ha diseñado un metodo para optimizar
+  la construcción del conjunto de abscisas inicial para 
+  aumentar la eficiencia del muestreo @james2024automated.
 ]
 #slide[
 

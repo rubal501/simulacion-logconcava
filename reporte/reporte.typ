@@ -31,13 +31,14 @@ diferencia del método de inversión, que requiere que la función de distribuci
 acumulativa (CDF) sea analíticamente invertible o al menos factible de invertir
 numéricamente—una condición rara vez cumplida en situaciones prácticas—el
 método AR no impone esta restricción. En cambio, AR se basa en la construcción
-de una función envolvente $g$, que satisface la condición $f(x) <= c g(x)$ para
+de una función envolvente $g$, que satisface la condición $f(x) <= K g(x)$ para
 toda $x$, siendo $f$ la densidad objetivo y $c$ una constante
 positiva conocida como constante de aceptación @devroyeNonUniformRandomVariate1986.
 
 La eficiencia del método AR depende directamente de qué tan ajustada sea esta
-función envolvente respecto a la densidad objetivo; cuanto más cercano sea el
-cociente $f/(c g)$ a $1$, menor será la tasa de rechazo y, por ende, más
+función envolvente respecto a la densidad objetivo; cuanto más cercana sea la 
+probabilidad de aceptacion 
+ $1/(K)$ a $1$ más
 eficiente será el muestreo.
 
 En este proyecto analizaremos diversas desigualdades útiles para densidades
@@ -210,8 +211,9 @@ table(
   [Algoritmo 1], [exacta], [$g_1$],
   [Algoritmo 2], [exacta], [$g_2$],
   [Algoritmo 3], [exacta], [$g_3$],
-  [Algoritmo 4], [exacta], [$g_4$],
-  [Algoritmo 5], [exacta], [$g_5$],
+  [Algoritmo 4], [$h_1$], [$g_4$],
+  [Algoritmo 5], [$h_2$], [$g_5$],
+  [Algoritmo 6], [$h_1$], [$g_6$],
 ),
   caption: [Nomenclatura de algoritmos.]
 )<tab:nomen1>
@@ -377,7 +379,6 @@ funciones $l_(K+1), u_(K+1)$, entre mas puntos tenga el conjunto de abscisas ent
 $g_(K)$ estará mas ajustada sobre $f$ lo cual reduce las muestras rechazadas.
 
 
-
 #pseudocode-list(booktabs: true, name:"Algoritmo ARS")[
   + *function* ARS($N,T_K$)
   + Definir $g_T, s_T$
@@ -387,17 +388,13 @@ $g_(K)$ estará mas ajustada sobre $f$ lo cual reduce las muestras rechazadas.
     + $U tilde uniform(0,1)$
     + *if*  $U <= (s_T (x))/(g_T (x))$ *then*
       + Agregar $x$ a $X$
-    + *end*
-
-    + *if* $U <= (f(x))/(g_K (x))$ *then*
+    + *else then*
+      + *if*  $U <= (s_T (x))/(g_T (x))$ *then*
       +  Agregar $x$ a $X$
-    + *end*
-
-    + *if* $U >= (s_T (x))/(g_T (x))$ *then*
+      + *end* 
       + Actualizar el conjunto de abscisas $T$ añadiendo $x$
       + Re definir $g_T, s_T$
     + *end*
-
   + *end*
   + *return* $X$
 ]
@@ -569,5 +566,13 @@ construir la envolvente.
 La versatilidad de estos algoritmos, especialmente en el caso de ARS donde solo se 
 requiere la su posición de que $f$ es log cóncava, da una clara ventaja que compensa su alto costo computacional 
 que tienen.
+
+Unos anos despues del articulo original donde se propuso (ARS) Gilks y Walters 
+propusieron una version que no requiere la derivada de $f$  
+@gilks1992derivative. Tambien se ha propuesto una generalizacion para densidades que no 
+son log convacavs @martino2011generalization, la cual requiere de consideraciones extra.
+Tambien se ha diseñado un metodo para optimizar
+la construcción del conjunto de abscisas inicial para 
+aumentar la eficiencia del muestreo @james2024automated.
 
 #bibliography("references.bib")
