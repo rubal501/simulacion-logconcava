@@ -505,7 +505,7 @@ Ejemplo de función envolvente $u_T$ y función de squezzing $l_T$ para una dens
 Muchas gracias!!
 
 #figure(
-qr-code("https://typst.app", width: 10cm),
+qr-code("https://github.com/rubal501/simulacion-logconcava", width: 10cm),
     caption:[Repositorio con el código del proyecto.],
     supplement: none
   )
