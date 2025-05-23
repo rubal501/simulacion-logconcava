@@ -567,11 +567,11 @@ La versatilidad de estos algoritmos, especialmente en el caso de ARS donde solo 
 requiere la su posición de que $f$ es log cóncava, da una clara ventaja que compensa su alto costo computacional 
 que tienen.
 
-Unos anos despues del articulo original donde se propuso (ARS) Gilks y Walters 
-propusieron una version que no requiere la derivada de $f$  
-@gilks1992derivative. Tambien se ha propuesto una generalizacion para densidades que no 
-son log convacavs @martino2011generalization, la cual requiere de consideraciones extra.
-Tambien se ha diseñado un metodo para optimizar
+Unos anos después del articulo original donde se propuso (ARS) Gilks y Walters 
+propusieron una versión que no requiere la derivada de $f$  
+@gilks1992derivative. Tambien se ha propuesto una generalización para densidades que no 
+son log cóncava @martino2011generalization, la cual requiere de consideraciones extra.
+También se ha diseñado un metodo para optimizar
 la construcción del conjunto de abscisas inicial para 
 aumentar la eficiencia del muestreo @james2024automated.
 

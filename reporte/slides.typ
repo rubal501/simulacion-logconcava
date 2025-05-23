@@ -3,7 +3,7 @@
 #import "@preview/metropolis-polylux:0.1.0" as metropolis
 #import metropolis: new-section, focus
 #import "@preview/lovelace:0.3.0": *
-
+#import "@preview/cades:0.3.0": qr-code
 
 
 
@@ -494,13 +494,25 @@ Ejemplo de función envolvente $u_T$ y función de squezzing $l_T$ para una dens
 - ARS *NO* es optimo ya que en la mayoría de los casos es posible diseñar un algoritmo especializado.
 - La ventaja principal de ARS es su universalidad. Solo requerimos la forma cerrada de $f$ y su derivada 
   para poder simular   muestras 
-- En un trabajo posterior Gilks y Walters propusieron una version de ARS que no necesita la derivada de $f$  
-  @gilks1992derivative. Tambien se ha propuesto una generalizacion para densidades que no 
-  son log convacavs @martino2011generalization.
-- Tambien se ha diseñado un metodo para optimizar
+- En un trabajo posterior Gilks y Walters propusieron una versión de ARS que no necesita la derivada de $f$  
+  @gilks1992derivative. También se ha propuesto una generalización para densidades que no 
+  son log cóncavas @martino2011generalization.
+- También se ha diseñado un método para optimizar
   la construcción del conjunto de abscisas inicial para 
   aumentar la eficiencia del muestreo @james2024automated.
 ]
+#focus[
+Muchas gracias!!
+
+#figure(
+qr-code("https://typst.app", width: 10cm),
+    caption:[Repositorio con el código del proyecto.],
+    supplement: none
+  )
+
+
+]
+
 #slide[
 
   #bibliography("references.bib")
